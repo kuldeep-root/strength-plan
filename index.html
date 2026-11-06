@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<!-- Strict CSP: only this site's own files, plus Google Apps Script for the optional sheet sync. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://script.google.com https://script.googleusercontent.com; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#17804F">
+<meta name="color-scheme" content="light dark">
+<title>Weekly Strength Plan</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Weekly Strength Plan</h1>
+    <p class="sub">Upper / lower split, 4 training days. Built around fat loss, overall strength, and a neck-friendly exercise selection.</p>
+    <div class="meta"><span class="pill">4 days lifting</span><span class="pill">~70–80 min incl. warm-up</span><span class="pill">2 recovery days</span><span class="pill">1 full rest</span></div>
+  </header>
+  <nav class="strip" id="strip" role="tablist" aria-label="Days"></nav>
+  <main id="panel" role="tabpanel"><noscript>This app needs JavaScript turned on.</noscript></main>
+</div>
+
+<div class="timer" id="timer" aria-live="polite">
+  <div class="bar" id="tbar"></div>
+  <div class="in">
+    <div class="lab" id="tlab"><small>Rest</small><span>—</span></div>
+    <div class="clock" id="tclock">0:00</div>
+    <button type="button" id="tplus">+15s</button>
+    <button type="button" id="tstop">Close</button>
+  </div>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
